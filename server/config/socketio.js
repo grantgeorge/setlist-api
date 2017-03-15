@@ -17,7 +17,6 @@ function onConnect(socket) {
 
   // Insert sockets below
   require('../api/discography/discography.socket').register(socket)
-  require('../api/thing/thing.socket').register(socket)
 }
 
 exports = module.exports = socketio => {

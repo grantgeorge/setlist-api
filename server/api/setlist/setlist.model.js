@@ -6,8 +6,12 @@ const mongoose = require('mongoose')
 let SongSchema = new mongoose.Schema({
   name: String,
   previewUrl: String,
+  artistImageUrl: String,
   // Spotify obj
   // id, preview, more meta information?
+  albumName: String,
+  albumImageUrl: String,
+  spotifyId: String,
   spotify: {}
 })
 

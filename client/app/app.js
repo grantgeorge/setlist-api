@@ -6,7 +6,7 @@ import ngCookies from 'angular-cookies'
 import ngResource from 'angular-resource'
 import ngSanitize from 'angular-sanitize'
 import 'angular-socket-io'
-import cloudinary from 'cloudinary-core'
+import 'cloudinary-jquery-file-upload/cloudinary-jquery-file-upload'
 
 import uiRouter from 'angular-ui-router'
 import uiBootstrap from 'angular-ui-bootstrap'
@@ -26,15 +26,15 @@ import main from './main/main.component'
 import constants from './app.constants'
 import util from '../components/util/util.module'
 import socket from '../components/socket/socket.service'
-require('../components/cloudinary/angular.cloudinary.js')(cloudinary, angular)
-// import './main/animations'
-// import './main/controllers'
-// import './main/service'
+import '../components/cloudinary/angular.cloudinary.js'
+import './main/animations'
+import './main/controllers'
+import './main/service'
 
 import './app.scss'
 
 angular.module('setlistApiApp', [ngAnimate, ngCookies, ngResource, ngSanitize, 'btford.socket-io',
-  // 'cloudinary',
+  'cloudinary',
   // 'photoAlbumAnimations',
   // 'photoAlbumServices',
   // 'photoAlbumControllers',

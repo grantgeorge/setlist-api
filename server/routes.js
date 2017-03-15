@@ -10,7 +10,6 @@ const path = require('path')
 exports = module.exports = app => {
   // Insert routes below
   app.use('/api/discographys', require('./api/discography'));
-  app.use('/api/things', require('./api/thing'))
   app.use('/api/setlists', require('./api/setlist'))
 
   app.use('/api/users', require('./api/user'))

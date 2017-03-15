@@ -3,8 +3,6 @@ import uiRouter from 'angular-ui-router'
 import routing from './main.routes'
 
 export class MainController {
-  awesomeThings = []
-  newThing = ''
 
   /*@ngInject*/
   constructor($http, $scope, socket) {
@@ -13,16 +11,11 @@ export class MainController {
     // this.cloudinary = cloudinary
 
     $scope.$on('$destroy', function() {
-      socket.unsyncUpdates('thing')
+      // socket.unsyncUpdates('thing')
     })
   }
 
   $onInit() {
-    // this.$http.get('/api/things')
-    //   .then(response => {
-    //     this.awesomeThings = response.data
-    //     this.socket.syncUpdates('thing', this.awesomeThings)
-    //   })
   }
 
   // uploadFiles(files) {
